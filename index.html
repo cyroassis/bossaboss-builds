@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BossaBoss test build</title>
+<style>
+  body { font: 17px/1.5 -apple-system, system-ui, sans-serif; margin: 0; padding: 32px 20px; background: #f4f6f8; color: #141a21; }
+  main { max-width: 28rem; margin: 0 auto; display: grid; gap: 16px; }
+  h1 { font-size: 24px; margin: 0; }
+  p { margin: 0; color: #5d6b79; }
+  a.b { display: block; text-align: center; padding: 14px; border-radius: 12px; background: #12a37f; color: #fff; font-weight: 600; text-decoration: none; }
+  small { color: #5d6b79; }
+</style>
+</head>
+<body>
+<main>
+  <h1>BossaBoss: iPhone test build</h1>
+  <p>For registered test iPhones only (development build, with Tap to Pay on iPhone). Open this page in Safari on the iPhone.</p>
+  <a class="b" href="itms-services://?action=download-manifest&amp;url=https://cyroassis.github.io/bossaboss-builds/manifest.plist">Install</a>
+  <small id="v"></small>
+</main>
+<script>fetch("version.txt").then(r => r.ok ? r.text() : "").then(t => { if (t) document.getElementById("v").textContent = "Build " + t; });</script>
+</body>
+</html>
